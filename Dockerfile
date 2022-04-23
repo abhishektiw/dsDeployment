@@ -26,4 +26,4 @@ COPY --chown=forgerock:root *.sh /opt/opendj/
 
 # This is the basic DS setup from the DS repo. It does the bare bones
 # setup - without any profiles. Profile setup will come later at runtime.
-RUN ./ds-setup.sh && rm ./ds-setup.sh && rm -fr ldif-ext
+RUN sudo ./ds-setup.sh && rm ./ds-setup.sh && rm -fr ldif-ext
