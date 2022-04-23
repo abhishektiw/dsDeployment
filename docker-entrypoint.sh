@@ -185,6 +185,8 @@ dev)
     waitUntilSigTerm
     ;;
 *)
+    ls -l
+    whoami
     removeLocks
     echo "Undefined entrypoint. Will exec $@"
     shift
