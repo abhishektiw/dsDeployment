@@ -185,7 +185,7 @@ dev)
     waitUntilSigTerm
     ;;
 *)
-    su -l root
+    su -l forgerock
     removeLocks
     echo "Undefined entrypoint. Will exec $@"
     shift
