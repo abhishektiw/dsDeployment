@@ -6,9 +6,9 @@
 FROM gcr.io/forgerock-io/ds-empty/pit1:7.2.0-latest-postcommit
 
 # FOR DEBUG. Remove for production deployment
-#USER root
-#RUN apt-get update && apt-get install -y --no-install-recommends vim ncat dnsutils 
-USER forgerock
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends vim ncat dnsutils 
+#USER forgerock
 
 # The PVC mount point where all writeable data is stored.
 ENV DS_DATA_DIR /opt/opendj/data
