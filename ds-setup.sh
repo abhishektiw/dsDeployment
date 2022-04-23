@@ -20,7 +20,7 @@
 #
 # Copyright 2019-2021 ForgeRock AS.
 #
-set -eux
+#set -eux
 
 rm -f template/config/tools.properties
 rm -rf -- README* bat *.zip *.png *.bat setup.sh
