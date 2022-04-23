@@ -185,8 +185,7 @@ dev)
     waitUntilSigTerm
     ;;
 *)
-    ls -l
-    whoami
+    su -l root
     removeLocks
     echo "Undefined entrypoint. Will exec $@"
     shift
