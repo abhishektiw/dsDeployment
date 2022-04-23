@@ -171,7 +171,6 @@ restore)
 start-ds)
     ;&
 start)
-    removeLocks
     exec start-ds --nodetach
     ;;
 
@@ -185,8 +184,7 @@ dev)
     waitUntilSigTerm
     ;;
 *)
-    su -l forgerock
-    removeLocks
+    
     echo "Undefined entrypoint. Will exec $@"
     shift
     exec "$@"
