@@ -23,7 +23,8 @@ ENV PEM_TRUSTSTORE_DIRECTORY "/var/run/secrets/keys/truststore"
 COPY --chown=forgerock:root default-scripts /opt/opendj/default-scripts
 COPY --chown=forgerock:root ldif-ext /opt/opendj/ldif-ext
 COPY --chown=forgerock:root *.sh /opt/opendj/
-
+RUN ls -l
+RUN whoami
 # This is the basic DS setup from the DS repo. It does the bare bones
 # setup - without any profiles. Profile setup will come later at runtime.
-RUN sudo ./ds-setup.sh && rm ./ds-setup.sh && rm -fr ldif-ext
+RUN ./ds-setup.sh && rm ./ds-setup.sh && rm -fr ldif-ext
